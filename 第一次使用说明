@@ -11,8 +11,8 @@ conda install -c conda-forge notebook jupyterlab jupyter_client
 在终端直接输入R然后回车进入R
 
 5、然后运行（下面两个指令分别运行，运行完第一个，成功之后再运行第二个）
-install.packages("IRkernel")
-IRkernel::installspec()
+install.packages("IRkernel"）
+IRkernel::installspec(name = "ir46", displayname = "R 4.6")（注意这里最好要写name是什么，以及displayname是什么，要不然后面容易搞混）
 
 6、验证内核是否注册成功
 先退出R
