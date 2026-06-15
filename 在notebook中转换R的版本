@@ -1,0 +1,13 @@
+1、激活目标环境
+conda activate r43
+
+2、在目标环境里安装 Jupyter 组件
+conda install -c conda-forge notebook jupyterlab jupyter_client
+
+3、在该环境的 R 里安装并注册 IRkernel
+
+
+4、
+5、
+6、
+7
