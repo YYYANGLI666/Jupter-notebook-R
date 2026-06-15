@@ -8,7 +8,7 @@ conda activate r46（还是环境名称）
 conda install -c conda-forge notebook jupyterlab jupyter_client
 
 4、进入R
-在终端直接输入R
+在终端直接输入R然后回车进入R
 
 5、然后运行（下面两个指令分别运行，运行完第一个，成功之后再运行第二个）
 install.packages("IRkernel")
