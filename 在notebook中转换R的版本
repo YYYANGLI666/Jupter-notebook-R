@@ -5,9 +5,20 @@ conda activate r43
 conda install -c conda-forge notebook jupyterlab jupyter_client
 
 3、在该环境的 R 里安装并注册 IRkernel
+输入R，回车
+然后分别输入以下指令（第一个成功再输入第二个）
+install.packages("IRkernel")
+IRkernel::installspec(name = "ir43", displayname = "R 4.3")
+（这里的 name 和 displayname 可以自定义，用来区分不同版本的 R 内核）
 
+4、查看内核列表，退出 R，在终端运行：
+q() 
+jupyter kernelspec list
 
-4、
-5、
-6、
-7
+5、在 Notebook 中切换内核
+打开 Jupyter Notebook → 点击右上角 Kernel → Change Kernel → 选择对应的 R 版本（比如 “R 4.3”）。
+
+6、每个 R 版本需要在对应的 conda 环境里安装 Jupyter 和 IRkernel。
+用 IRkernel::installspec(name, displayname) 注册时给不同版本起名字。
+在 Notebook 里就能自由切换不同的 R 内核。
+
