@@ -63,5 +63,14 @@ file.rename(on,nn)
 #file.rename(on, nn)：正式在本地磁盘上执行重命名。
 #运行后的最终效果：
 #你的工作目录下会多出一个 01_data 文件夹，结构如下，此时直接喂给 Seurat 的 Read10X("01_data/sample1") 就能完美读取了：
-rm(list = ls())
+#rm(list = ls())
 
+01_data/
+├── sample1/
+│   ├── barcodes.tsv.gz
+│   ├── features.tsv.gz
+│   └── matrix.mtx.gz
+└── sample2/
+    ├── barcodes.tsv.gz
+    ├── features.tsv.gz
+    └── matrix.mtx.gz
