@@ -1,1 +1,23 @@
+1、一定要先安装需要的一些底层的编译依赖
+conda install -c conda-forge hdf5 libxml2 zlib curl openssl
+
+
+
+
+
+1、安装BiocManager
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+2、安装glmGamPoi需要的依赖
+BiocManager::install(c("Rhdf5lib", "rhdf5filters", "rhdf5", "XVector", 
+                       "SparseArray", "DelayedArray", "beachmat", 
+                       "DelayedMatrixStats", "HDF5Array", 
+                       "SummarizedExperiment", "SingleCellExperiment"))
+3、安装glmGamPoi
+BiocManager::install("glmGamPoi")
+
+
+
+
 
