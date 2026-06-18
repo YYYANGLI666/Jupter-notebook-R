@@ -1,1 +1,26 @@
+1、创建环境
+conda create -name -r=4.x
+
+2、激活环境
+conda activate name
+
+3、退出环境
+conda deactivate name
+
+4、查看环境
+conda env list
+
+5、查看安装的包
+conda list
+
+6、安装包
+conda install -c conda-forge name
+
+7、安装指定版本的包
+conda install name 
+
+8、搜索莫个包
+conda search name
+
+9、不用切进R就可以在终端运行的指令
 
