@@ -1,0 +1,31 @@
+整理数据
+#untar("GSE231920_RAW.tar",exdir = "GSE231920_RAW")
+#unlink("GSE231920_RAW.tar")
+library(stringr)
+fs = paste0("GSE231920_RAW/",dir("GSE231920_RAW/"))
+fs
+samples = dir("GSE231920_RAW/") %>% str_split_i("_",2) %>% unique();samples
+
+#为每个样本创建单独的文件夹
+lapply(samples, function(s){
+  ns = paste0("01_data/",s)
+  if(!file.exists(ns))dir.create(ns,recursive = T)
+})
+
+#每个样本的三个文件复制到单独的文件夹
+lapply(fs, function(s){
+  #s = fs[1]
+  for(i in 1:length(samples)){
+    #i = 1
+    if(str_detect(s,samples[[i]])){
+      file.copy(s,paste0("01_data/",samples[[i]]))
+    }
+  }
+})
+
+#文件名字修改
+on = paste0("01_data/",dir("01_data/",recursive = T));on
+nn = str_remove(on,"GSM\\d+_sample\\d_");nn
+file.rename(on,nn)
+
+rm(list = ls())
