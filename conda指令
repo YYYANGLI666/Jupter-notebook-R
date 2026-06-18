@@ -23,4 +23,5 @@ conda install name
 conda search name
 
 9、不用切进R就可以在终端运行的指令
-
+R -e "remotes::install_github('mojaveazure/seurat-disk')"
+R -e ""
